@@ -21,6 +21,7 @@
   - nexus-setup
   - deploy
 
+## Commands
 ```sh
 # Clone cicd-ansible repository
 $ git clone https://github.com/aridnik/cicd-ansible.git
