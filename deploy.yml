@@ -1,0 +1,12 @@
+--- 
+- name: set-facts for variables
+  hosts: all
+  roles:
+    - "set-facts"
+  become: true
+
+- name: application deployment with CODE_VERSION
+  hosts: all
+  roles:
+    - "deploy"
+  become: true

@@ -1,0 +1,4 @@
+---
+- set_fact:
+    tomcat_path: /opt/tomcat
+    
