@@ -1,0 +1,13 @@
+---
+- name: create aridnk group
+  group:
+    name: aridnk
+    state: present
+
+- name: Add the user 'aridnk' and a primary group of 'aridnk'
+  user:
+    name: aridnk
+    comment: aridnk User
+    groups: aridnk,wheel
+    append: yes
+    shell: /bin/bash

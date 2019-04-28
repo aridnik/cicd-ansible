@@ -1,0 +1,20 @@
+---
+- name: create tomcat group
+  group:
+    name: tomcat
+    state: present
+
+- name: Add the user 'tomcat' and a primary group of 'tomcat'
+  user:
+    name: tomcat
+    comment: tomcat User
+    groups: tomcat
+    append: yes
+    shell: /bin/bash
+
+- name: create tomcat path
+  file:
+    state: directory
+    path: {{tomcat_path}}
+    owner: tomcat
+    group: tomcat
